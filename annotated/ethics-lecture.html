@@ -1,12 +1,14 @@
 <html>
 <head>
-    <style>
+    <style type="text/css">
         .meta { display: none; }
     </style>
 </head>
 
 <body
     vocab="http://schema.org/"
+    prefix="wittgenstein: http://foo/wittgenstein/"
+
     typeOf="CreativeWork"
 >
 
@@ -14,11 +16,12 @@
     <dt>Author</dt>
     <dd property="author" typeOf="Person">
         <span property="givenName">Ludwig</span>
-        <span property="familyName">Wittgenstein</span></dd>
+        <span property="familyName">Wittgenstein</span>
+    </dd>
     <dt>Editor</dt>
     <dd property="editor" typeOf="Person">
         <span property="givenName">Alois</span>
-        <span property="familyName">Pichler</span></dd>
+        <span property="familyName">Pichler</span>
     </dd>
 </dl>
 
@@ -58,7 +61,7 @@
 
 <p>Now I am going to use the term Ethics in a slightly wider sense, in a sense in fact which includes what I believe to be the most essential part of what is generally called Aesthetics.</p>
 
-<p>And to make you see as clearly as possible what I take to be the subject matter of Ethics I will put before you a number of more or less synonymous expressions each of which could be substituted for the above definition, and by enumerating them I want to produce the same sort of effect which Galton produced when he took a number of photos of different faces on the same photographic plate in order to get the picture of the typical features they all had in common.</p>
+<p typeof="wittgenstein:Example" resource="#chineseFaceExample">And to make you see as clearly as possible what I take to be the subject matter of Ethics I will put before you a number of more or less synonymous expressions each of which could be substituted for the above definition, and by enumerating them I want to produce the same sort of effect which Galton produced when he took a number of photos of different faces on the same photographic plate in order to get the picture of the typical features they all had in common.</p>
 
 <p>And as by showing to you such a collective photo I could make you see what is the typical — say — Chinese face; so if you look through the row of synonyms which I will put before you, you will, I hope, be able to see the characteristic features they all have in common and these are the characteristic features of Ethics.</p>
 
@@ -82,15 +85,28 @@
 
 <p>But this is not how Ethics uses them.</p>
 
-<p>Supposing that I could play tennis and one of you saw me playing and said “well you play pretty badly” and suppose I answered “I know, I'm playing badly but I don't want to play any better”, all the other man could say would be “Ah then that's all right”.</p>
+<div typeof="wittgenstein:Example" resource="#tennisExample">
+    <p>Supposing that
+        <span property="wittgenstein:participant">I</span>
+        could play tennis and one of
+        <span property="wittgenstein:participant">you</span>
+        <span property="wittgenstein:activity">saw me playing</span>
+        and
+        <span property="wittgenstein:activity">said “well you play pretty badly”</span>
+        and suppose I
+        <span property="wittgenstein:activity">answered “I know, I'm playing badly but I don't want to play any better”</span>,
+        all the other man could
+        <span property="wittgenstein:activity">say would be “Ah then that's all right”</span>.
+    </p>
 
-<p>But suppose I had told one of you a preposterous lie and he came up to me and said “You're behaving like a beast” and then I were to say “I know I behave badly, but then I don't want to behave any better”, could he then say “Ah, then that's all right”? Certainly not; he would say “Well, you ought to want to behave better”.</p>
+    <p>But suppose I had told one of you a preposterous lie and he came up to me and said “You're behaving like a beast” and then I were to say “I know I behave badly, but then I don't want to behave any better”, could he then say “Ah, then that's all right”? Certainly not; he would say “Well, you ought to want to behave better”.</p>
 
-<p>Here you have an absolute judgment of value, whereas the first instance was one of a relative judgment.</p>
+    <p>Here you have an absolute judgment of value, whereas the first instance was one of a relative judgment.</p>
 
-<p>The essence of this difference seems to be obviously this: Every judgment of relative value is a mere statement of facts and can therefore be put in such a form that it loses all the appearance of a judgment of value: Instead of saying “this is the right way to Granchester” I could equally well have said “this is the right way you have to go if you want to get to Granchester in the shortest time”, “this man is a good runner” simply means that he runs a certain number of miles in a certain number of minutes, and so forth.</p>
+    <p>The essence of this difference seems to be obviously this: Every judgment of relative value is a mere statement of facts and can therefore be put in such a form that it loses all the appearance of a judgment of value: Instead of saying “this is the right way to Granchester” I could equally well have said “this is the right way you have to go if you want to get to Granchester in the shortest time”, “this man is a good runner” simply means that he runs a certain number of miles in a certain number of minutes, and so forth.</p>
 
-<p>Now what I wish to contend is, that although all judgments of relative value can be shown to be mere statements of facts, no statement of fact can ever be, or imply, a judgment of absolute value.</p>
+    <p>Now what I wish to contend is, that <span property="wittgenstein:conclusion">although all judgments of relative value can be shown to be mere statements of facts, no statement of fact can ever be, or imply, a judgment of absolute value</span>.</p>
+</div>
 
 <p>Let me explain this: Suppose one of you were an omniscient person and therefore knew all the movements of all the bodies in the world dead or alive and that he also knew all the states of mind of all human beings that ever lived, and suppose this man wrote all he knew in a big book, then this book would contain the whole description of the world; and what I want to say is, that this book would contain nothing that we would call an ethical judgment or anything that would logically imply such a judgment.</p>
 
