@@ -9,17 +9,17 @@
 ]>
 
 
-<rdf:RDF xmlns="http://hal.jgdx.no/wittgenstein#"
-     xml:base="http://hal.jgdx.no/wittgenstein"
+<rdf:RDF xmlns="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#"
+     xml:base="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://hal.jgdx.no/wittgenstein"/>
-    
+    <owl:Ontology rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3"/>
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -27,34 +27,45 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
 
 
-    <!-- http://hal.jgdx.no/wittgenstein#activity -->
 
-    <owl:ObjectProperty rdf:about="http://hal.jgdx.no/wittgenstein#activity">
-        <rdfs:domain rdf:resource="http://hal.jgdx.no/wittgenstein#Example"/>
-    </owl:ObjectProperty>
-    
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#hasConclusion -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#hasConclusion"/>
 
 
-    <!-- http://hal.jgdx.no/wittgenstein#conclusion -->
 
-    <owl:ObjectProperty rdf:about="http://hal.jgdx.no/wittgenstein#conclusion">
-        <rdfs:domain rdf:resource="http://hal.jgdx.no/wittgenstein#Example"/>
-    </owl:ObjectProperty>
-    
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#hasQuestion -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#hasQuestion"/>
 
 
-    <!-- http://hal.jgdx.no/wittgenstein#participant -->
 
-    <owl:ObjectProperty rdf:about="http://hal.jgdx.no/wittgenstein#participant">
-        <rdfs:domain rdf:resource="http://hal.jgdx.no/wittgenstein#Example"/>
-    </owl:ObjectProperty>
-    
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#hasSubject -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#hasSubject"/>
 
 
-    <!-- 
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#hasQuestion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#hasQuestion"/>
+
+
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -62,18 +73,106 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
 
 
-    <!-- http://hal.jgdx.no/wittgenstein#Example -->
 
-    <owl:Class rdf:about="http://hal.jgdx.no/wittgenstein#Example"/>
-    
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Analogy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Analogy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Hypothetical"/>
+    </owl:Class>
 
 
-    <!-- http://hal.jgdx.no/wittgenstein#Statement -->
 
-    <owl:Class rdf:about="http://hal.jgdx.no/wittgenstein#Statement"/>
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Concept -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Concept">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Person"/>
+    </owl:Class>
+
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Conclusion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Conclusion">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Discussion"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Person"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Question"/>
+    </owl:Class>
+
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Discussion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Discussion">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#hasQuestion"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Question"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Person"/>
+    </owl:Class>
+
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Hypothetical -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Hypothetical">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Person"/>
+    </owl:Class>
+
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Metaphor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Metaphor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Hypothetical"/>
+    </owl:Class>
+
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Person">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Statement"/>
+    </owl:Class>
+
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Question -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Question"/>
+
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Simile -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Simile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Hypothetical"/>
+    </owl:Class>
+
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Statement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Statement"/>
+
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Term -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Term">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Concept"/>
+    </owl:Class>
+
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Topic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Topic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Concept"/>
+    </owl:Class>
 </rdf:RDF>
 
 
