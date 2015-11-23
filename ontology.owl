@@ -15,11 +15,11 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3"/>
+    <owl:Ontology rdf:about="http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology"/>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -27,28 +27,83 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
 
 
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#asserts -->
 
-    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#hasConclusion -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#hasConclusion"/>
-
-
-
-    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#hasQuestion -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#hasQuestion"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#asserts"/>
+    
 
 
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#concludes -->
 
-    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#hasSubject -->
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#concludes">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Conclusion"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Discussion"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Hypothetical"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Question"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Topic"/>
+    </owl:ObjectProperty>
+    
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#hasSubject"/>
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#defines -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#defines">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Concept"/>
+    </owl:ObjectProperty>
+    
 
 
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#hasParticipant -->
 
-    <!--
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#hasParticipant">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Concept"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Conclusion"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Discussion"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Hypothetical"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Person"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Predicate"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Question"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Topic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#pertainsTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#pertainsTo">
+        <rdfs:comment xml:lang="en">When something pertains to a specific topic.</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Topic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#raises -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#raises">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Question"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#refersTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#refersTo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#spawns -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#spawns">
+        <rdfs:comment xml:lang="en">Relation that spawns a discussion.</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Discussion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -56,16 +111,37 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
 
 
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#keyword -->
 
-    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#hasQuestion -->
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#keyword">
+        <rdfs:comment xml:lang="en">A keyword that can be used to identify or describe a Thing.</rdfs:comment>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#name"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#hasQuestion"/>
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#name">
+        <rdfs:comment xml:lang="en">The name of a Topic, Concept or Entity.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Concept"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Topic"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
 
 
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#part -->
 
-    <!--
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#part"/>
+    
+
+
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -73,106 +149,152 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
 
 
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Concept -->
 
-    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Analogy -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Analogy">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Hypothetical"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Concept">
+        <rdfs:comment xml:lang="en">A concrete concept in Wittgenstein&apos;s universe.</rdfs:comment>
     </owl:Class>
+    
 
 
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Conclusion -->
 
-    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Concept -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Concept">
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Person"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Conclusion">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Discussion"/>
+        <rdfs:comment xml:lang="en">Some form of conclusion in Wittgenstein&apos;s universe.</rdfs:comment>
     </owl:Class>
+    
 
 
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Discussion -->
 
-    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Conclusion -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Conclusion">
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Discussion"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Person"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Question"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Discussion">
+        <rdfs:comment xml:lang="en">A discussion in Wittgenstein&apos;s universe.</rdfs:comment>
     </owl:Class>
+    
 
 
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Hypothetical -->
 
-    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Discussion -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Discussion">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#hasQuestion"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Question"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Person"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Hypothetical">
+        <rdfs:comment xml:lang="en">A hypothetical “what if?” in Wittgenstein&apos;s universe.</rdfs:comment>
     </owl:Class>
+    
 
 
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Person -->
 
-    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Hypothetical -->
+    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Person"/>
+    
 
-    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Hypothetical">
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Person"/>
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Predicate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Predicate">
+        <rdfs:comment xml:lang="en">A fact, or any sentence with a subject and a verb.</rdfs:comment>
     </owl:Class>
+    
 
 
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Question -->
 
-    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Metaphor -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Metaphor">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Hypothetical"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Question">
+        <rdfs:comment xml:lang="en">A question raised by someone in Wittgenstein&apos;s universe.</rdfs:comment>
     </owl:Class>
+    
 
 
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Topic -->
 
-    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Person -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Person">
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Statement"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Topic">
+        <rdfs:comment xml:lang="en">A topic in the Wittgenstein universe.</rdfs:comment>
     </owl:Class>
+    
 
 
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Question -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Question"/>
-
-
-
-    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Simile -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Simile">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Hypothetical"/>
-    </owl:Class>
+    
 
 
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Analogy -->
 
-    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Statement -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Statement"/>
-
-
-
-    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Term -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Term">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Concept"/>
-    </owl:Class>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Analogy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Hypothetical"/>
+    </owl:NamedIndividual>
+    
 
 
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Deity -->
 
-    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Topic -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Deity"/>
+    
 
-    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Topic">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/untitled-ontology-3#Concept"/>
-    </owl:Class>
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Metaphore -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Metaphore">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Hypothetical"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#People -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#People"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Person -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Simile -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Simile">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Hypothetical"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Term -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Term">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Concept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Value -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Value">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Concept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/jonas/ontologies/2015/10/wittgenstein-ontology#Person">
+        <rdfs:comment xml:lang="en">A person or personified thing.</rdfs:comment>
+    </rdf:Description>
 </rdf:RDF>
 
 
