@@ -1,0 +1,391 @@
+<html>
+<head>
+    <style type="text/css">
+        .meta { display: none; }
+    </style>
+</head>
+
+<body
+    prefix="w: http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology"
+    resource="#ReDiscoveringWittgenstein"
+    typeof="schema:CreativeWork"
+    vocab="http://schema.org/"
+>
+
+<dl class="meta">
+    <dt>Author</dt>
+    <dd property="schema:author" typeof="schema:Person" resource="#DeirdreChristinePageSmith">
+        <span property="schema:givenName">Deirdre</span>
+        <span property="schema:familyName">Page Smith</span>
+    </dd>
+</dl>
+
+<h1>Abstract</h1>
+
+<div typeof="w:Topic" resource="#DISCOVERY">
+    <ul class="meta">
+        <li property="w:name">Machine readable version of Wittgensteins's Nachlass</li>
+        <li property="w:definedBy" href="#DeirdreChristinePageSmith"></li>
+        <li property="w:description"><a href="http://wab.uib.no/">Wittgenstein Archives</a> at the <a href="http://uib.no">University of Bergen</a>'s efforts to make the whole of Wittgenstein's Nachlass machine readable.</li>
+        <li property="w:keywords">
+            machine readable, nachlass, analyze, software, present, programming, discovery, semantic, virtual research
+        </li>
+    </ul>
+    <div property="w:sourceText">
+
+        <p>The <a href="http://wab.uib.no/">Wittgenstein Archives</a> at the <a href="http://uib.no">University of Bergen</a> (<a href="http://wab.uib.no/">WAB</a>) was established in 1990 with the following goals:</p>
+        <ul>
+            <li>producing a machine readable version of <a href="http://www.wikidata.org/entity/Q9391">Wittgenstein</a>’s Nachlass;</li>
+            <li>developing software to assist scholars in locating, viewing and analyzing Nachlass texts;</li>
+            <li>developing registration systems and software to present, work with and analyze original textual sources; and</li>
+            <li>establishing links to international Wittgenstein research and computer programming projects with similar text encoding goals.</li>
+        </ul>
+
+        <p>Both the conception and realization of <a href="http://wab.uib.no/">WAB</a>’s participation in <a href="#DISCOVERY">DISCOVERY</a> (Digital Semantic Corpora for Virtual Research in Philosophy) fit with the further development of these initial goals.</p>
+        <p>This paper’s main objective is to present the advantages of <a href="#DISCOVERY">DISCOVERY</a>’s semantic approach to texts using examples from <a property="w:refersTo" href="ethics-lecture.html#LectureOnEthics">Ms. 139a</a>, otherwise known as <a href="http://www.wikidata.org/entity/Q9391">Wittgenstein</a>’s ‘<a property="w:refersTo" href="ethics-lecture.html#LectureOnEthics">Lecture on Ethics</a>’</p>
+    </div>
+</div>
+
+<h2>Compiling a machine-readable edition of <a href="http://www.wikidata.org/entity/Q9391">Wittgenstein</a>’s Nachlass</h2>
+
+<p>Preparing a machine readable version of <a href="http://www.wikidata.org/entity/Q9391">Wittgenstein</a>’s Nachlass began in Norway already in 1981 under the aegis of The Norwegian Wittgenstein Project (Det norske Wittgensteinprosjektet) which was a cooperative endeavour between the philosophy departments at Norway’s four main universities in Oslo, Bergen, Trondheim and Tromsø. </p>
+
+<p>Unfortunately, in the late 1980’s the materials it prepared could not be made publicly available since the rights to them were disputed, making both gaining permission for distribution and acquiring money to finance the project difficult.</p>
+
+<p>Auspiciously, in the early 1990’s, <a href="http://wab.uib.no/">WAB</a> attained both permission from <a href="http://www.wikidata.org/entity/Q9391">Wittgenstein</a>’s literary trustees (<a href="http://www.wikidata.org/entity/Q229646">G.E.M. Anscombe</a>, <a href="http://www.wikidata.org/entity/Q250315">Anthony Kenny</a>, <a href="http://www.wikidata.org/entity/Q954770">Peter Winch</a> and <a href="http://www.wikidata.org/entity/Q350183">Georg Henrik von Wright</a>) and funding.</p>
+
+<p>Software prototypes developed by, and some 3,200 pages transcribed by, the Norwegian Wittgenstein Project formed the foundation for  <a href="http://wab.uib.no/">WAB</a>’s initial work. </p>
+
+<p><a href="http://wab.uib.no/">WAB</a>’s first goal was to transcribe 7,500 pages of the 20,000 pages of <a href="http://www.wikidata.org/entity/Q9391">Wittgenstein</a>’s Nachlass and complete the most important elements of the software needed to view them. </p>
+
+<p>What is special about this transcription and the challenge to those developing software for the machine-readable edition, was to reproduce these pages as truly as possible. </p>
+
+<p>This meant capturing in a digital format the many cross outs, deletions, rewordings, cross references, etc., found in <a href="http://www.wikidata.org/entity/Q9391">Wittgenstein</a>’s Nachlass. </p>
+
+<p>To this purpose, <a href="http://wab.uib.no/">WAB</a> developed a standard for registering these aspects of <a href="http://www.wikidata.org/entity/Q9391">Wittgenstein</a>’s texts which formed the basis for software allowing the kind of versatile representation the project demanded.</p>
+
+<div typeof="w:Topic" resource="#TEI">
+    <ul class="meta">
+        <li property="w:name">Text Encoding Initiative Collaboration</li>
+        <li property="w:keywords">
+            text encoding, initiative, interchange, electronic texts
+        </li>
+        <li property="w:definedBy" href="#DeirdreChristinePageSmith"></li>
+        <li property="w:description">The Text Encoding Initiate works towards establishing guidelines for text encoding as well as the interchange of electronic texts. </li>
+    </ul>
+
+    <div property="w:sourceText">
+
+        <p><a href="http://wab.uib.no/">WAB</a> has cooperated closely with the Text Encoding Initiative (TEI) which works toward establishing guidelines for text encoding as well as the interchange of electronic texts. </p>
+
+        <p>TEI was established in 1988 and its initial set of Guidelines (TEI P1) issued in 1990. </p>
+
+        <p>Since then, <a href="http://wab.uib.no/">WAB</a> has been actively involved in and followed the development of TEI guidelines. </p>
+
+        <p>However, since TEI guidelines were based on a standard (SGML Standard Generalized Markup Language) which restricted encoding possibilities, <a href="http://wab.uib.no/">WAB</a> chose not to follow them. </p>
+
+        <p>Instead, <a href="http://wab.uib.no/">WAB</a> further developed the MECS (Multi-Element Code System – developed by Claus Huitfelt) coding system into MECS-WIT, which better suited its needs,.</p>
+    </div>
+</div>
+
+<div typeof="w:Topic" resource="#BEE">
+    <ul class="meta">
+        <li property="w:definedBy" href="#DeirdreChristinePageSmith"></li>
+        <li property="w:name">Bergen Electronic Edition</li>
+        <li property="w:keywords">
+            cdrom, cd. machine-readable, electronic facsimiles, original manuscripts, typescripts
+        </li>
+        <li property="w:description">The Bergen Electronic Edition is an electronic version of Wittgenstein's Nachlass on CDROM in diplomatic and normalized versions.</li>
+    </ul>
+
+    <div property="w:sourceText">
+
+        <h2>Bergen Electronic Edition (BEE)</h2>
+
+        <p>In 1992, <a href="http://wab.uib.no/">WAB</a> and Oxford University Press agreed to utilize the machine-readable version along with electronic facsimiles of the original manuscripts and typescripts toward publishing <a href="http://www.wikidata.org/entity/Q9391">Wittgenstein</a>’s Nachlass on CDROM. </p>
+
+        <p>In 2000, a 6 CD version of the BEE was released.</p>
+
+        <p>In addition to containing complete sources and drafts (over 50 different manuscripts) for <a href="http://www.wikidata.org/entity/Q9391">Wittgenstein</a>’s published works, the BEE includes previously unpublished or simply unknown material.</p>
+
+        <p>By presenting the Nachlass in what is termed a “combination of editions” (cf. <a href="http://www.wikidata.org/entity/Q15715078">Pichler</a> and Haugen 2005), the BEE’s comprehensiveness, however, extends beyond merely collecting <a href="http://www.wikidata.org/entity/Q9391">Wittgenstein</a>’s body of work into one edition. </p>
+
+        <p>This is accomplished by providing Nachlass texts in two separate but interlinked versions: diplomatic and normalized. </p>
+
+        <p>The former remains true to the original manuscript and typescript versions, preserving all deletions, over writings, spelling errors and word substitutions. </p>
+
+        <p>The latter shows editorial corrections, while deleted and overwritten texts are omitted and only the last alternative of two different readings is rendered (earlier alternatives can be viewed upon request). </p>
+
+        <p>Having these two versions at hand gives the reader insight into <a href="http://www.wikidata.org/entity/Q9391">Wittgenstein</a>’s writing process, and, in doing so, also an enhanced understanding of his thought’s development. </p>
+
+        <p>The same flexibility which allows for interlinked diplomatic and normalized versions enables specialized searches within manuscript sections, whole manuscripts and between manuscript groups as well as date ranges, specified languages, graphic material and mathematic notation. And it is in these latter features we get a taste of the advantages of a semantic approach. (cf. <a href="http://www.wikidata.org/entity/Q15715078">Pichler</a> 2002)</p>
+    </div>
+</div>
+
+<h2><a href="#DISCOVERY">DISCOVERY</a></h2>
+
+<div typeof="w:Topic" resource="#Philospace">
+    <ul class="meta">
+        <li property="w:definedBy" href="#DeirdreChristinePageSmith"></li>
+        <li property="w:name">Philospace</li>
+        <li property="w:keywords">
+            international research, virtual infrastructure, collaborative research, e-learning, discovery, european partners, pre-socratics, descartes, bruno, spinoza, leibniz, vico, baumgarten, kant, leading contemporary philosophers, gadamer, deleuze, vattami
+        </li>
+        <li property="w:description">Philospace was constructed as a virtual meeting place for philosophical collaboration and access to philosophical texts and media.</li>
+    </ul>
+
+    <div property="w:sourceText">
+        <p>After a period engaged in several EU projects promoting international research and virtual infrastructures for collaborative research and e-learning, <a href="http://wab.uib.no/">WAB</a> co-initiated DISCOVERY in 2005 with a host of European partners. </p>
+
+        <p><a href="#DISCOVERY">DISCOVERY</a>’s goal is to construct a <a href="#Philospace">Philospace</a>, a virtual meeting place for philosophical collaboration and access to philosophical texts and media. </p>
+
+        <p>These texts and media, called Philosource, are a collection of primary philosophical texts from the Pre-Socratics, to 16th to 18th century philosophical and scientific texts from Descartes, Bruno, Spinoza, Leibniz, Vico, Baumgarten and Kant; a variety of primary material (manuscripts, published works, etc.) from Nietzsche and Wittgenstein and is rounded out by 300 video/sound segments from leading contemporary philosophers such as Gadamer, Deleuze, Vattami et. al. (see: http://www.discovery-project.eu/index.html).</p>
+    </div>
+</div>
+
+<div property="w:sourceText" href="#DISCOVERY">
+    <p><a href="http://wab.uib.no/">WAB</a>s contribution to <a href="#DISCOVERY">DISCOVERY</a> consists of 5,000 pages covering ’The Big Typescript’ (1929-1934), the Brown Book complex (1934-36), the ‘<a property="w:refersTo" href="ethics-lecture.html#LectureOnEthics">Lecture on Ethics</a>’ 1929) and ‘Notes on Logic’ (1913).</p>
+
+    <p>What is exciting about the range of texts which <a href="http://wab.uib.no/">WAB</a> is thus preparing for <a href="#DISCOVERY">DISCOVERY</a>, is that they capture the consolidation of <a href="http://www.wikidata.org/entity/Q9391">Wittgenstein</a>’s thought between his middle and late (Philosophical Investigations) period.</p>
+
+    <p>Similarly to the BEE, the above Nachlass texts will be available in interlinked layers with a study layer added in between (as currently defined this shows editorial interventions regarding spelling, grammar and deletions as well as substitutions and cross outs where they make sense within the context of a sentence).</p>
+
+    <p>What is new in <a href="#DISCOVERY">DISCOVERY</a> is threefold: these texts will be available for free, text encoding has been migrated from MECS-WIT to TEI/XML, and, most interestingly for the purposes of this paper, they will be encoded with semantic tags.</p>
+</div>
+
+<div typeof="w:Discussion" resource="#SemanticLabelling">
+    <ul class="meta">
+        <li property="w:name">Semantic Labelling</li>
+        <li property="w:keywords">
+        wordings, synonyms, <a href="#BEE">bee</a>, metaphor, simile, literary device
+        </li>
+        <li property="w:description">A discussion on the difficulties on applying semantic labelling to texts.</li>
+        <li property="w:hasParticipant" href="#DeirdreChristinePageSmith"></li>
+    </ul>
+
+    <div property="w:sourceText">
+
+        <p>Unlike general text searches, semantic labelling helps researchers locate passages where the term or concept for which they search is discussed, but not literally used.</p>
+
+        <p>One can of course try to approximate this process by using synonyms or alternative wordings, but many occurrences will still be left out.</p>
+
+        <p>A somewhat different case would be someone searching for examples of <a href="http://www.wikidata.org/entity/Q9391">Wittgenstein</a>’s use of rhetorical questions.</p>
+
+        <p>With a regular general text search, one might attempt locating these by searching for a question mark followed by a quotation mark.</p>
+
+        <p>This would, however, work neither in most standard search functions (where both ’?’ and ‘ ” ’ are operators) nor the BEE.</p>
+
+        <p>Even considering the BEE’s increased flexibility, only an individual with specialized knowledge of the system and its parameters can achieve such a search.</p>
+
+        <p>Even assuming one has this specialist knowledge, the search would still not help distinguish between rhetorical questions and e.g. direct quotations or dialogue.</p>
+
+        <p>Yet another case would be someone looking for instances of metaphor, simile or other literary devices.</p>
+
+        <p>Although one might locate some of these passages simply by searching for these terms and hoping that they are followed by actual examples, far more will remain hidden</p>
+
+        <p>Semantic labelling thus clearly represents an advance in <a href="http://wab.uib.no/">WAB</a>’s goal of developing software to assist scholars in locating, viewing and analyzing Nachlass texts.
+        </p>
+    </div>
+</div>
+
+<h2 property="schema:about">Re-discovering Wittgenstein</h2>
+
+
+<div typeof="w:Discussion" resource="#SemanticLabellingDifficulties">
+    <ul class="meta">
+        <li property="w:name">The difficulties</li>
+        <li property="w:keywords">
+            paragraph division, semantic labelling, smaller units, thematic units, seemingly innocent
+        </li>
+        <li property="w:description">A discussion on the difficulties on applying semantic labelling to Wittgenstein's texts.</li>
+        <li property="w:hasParticipant" href="#DeirdreChristinePageSmith"></li>
+    </ul>
+
+    <div property="w:sourceText">
+
+        <p>I would like to illustrate these differences using a concrete example from <a property="w:refersTo" href="ethics-lecture.html#LectureOnEthics">MS139a</a>, otherwise known as <a href="http://www.wikidata.org/entity/Q9391">Wittgenstein</a>’s ‘<a href="ethics-lecture.html#LectureOnEthics">Lecture on Ethics</a>’.</p>
+
+        <p>Although all versions of ‘<a property="w:refersTo" href="ethics-lecture.html#LectureOnEthics">Lecture on Ethics</a>’, Ts 207 (published in Philosophical Occasions and <a href="#BEE">BEE</a>) and Mss 139a-b (published in <a href="#BEE">BEE</a>), will be available in <a href="#DISCOVERY">DISCOVERY</a>’s <a href="#Philospace">Philospace</a> as a Philosource, it is <a property="w:refersTo" href="ethics-lecture.html#LectureOnEthics">Ms 139a</a> which concerns us here.</p>
+
+        <p>One of the first problems <a property="w:refersTo" href="ethics-lecture.html#LectureOnEthics">Ms 139a</a> offers for semantic labelling is its lack of paragraph divisions (this holds for Ts 207 and <a property="w:refersTo" href="ethics-lecture.html#LectureOnEthics">Ms 139b</a>).</p>
+
+        <p>Such labelling requires units of text which are restricted in length, both to make labelling more exact and to assist users in locating labels.</p>
+
+        <p>For this reason, it was necessary to divide <a property="w:refersTo" href="ethics-lecture.html#LectureOnEthics">Ms 139a</a> into smaller units.</p>
+        <p>This was done according to thematic units (standard English paragraphs) which are well suited for semantic labelling.</p>
+
+        <p>Already in the second paragraph of Ms 139a we find examples where semantic tags are superior to simple word searches. </p>
+
+        <p>In the <a property="w:refersTo" href="ethics-lecture.html#AboutThisLecture">second sentence</a> we find a seemingly innocent word in two forms: ‘communicate’ and ‘communicating’. </p>
+
+        <p>This is not exactly a word which has inspired much in the way of secondary literature. </p>
+
+        <p>However, when we look at the way it is used, it can function as a synonym for other words such as ‘language’ and ‘explanation’, which might be of higher conceptual relevance for <a href="http://www.wikidata.org/entity/Q9391">Wittgenstein</a> researches as well as other philosophers who are have a more general interest in <a href="http://www.wikidata.org/entity/Q9391">Wittgenstein</a>’s philosophy.</p>
+
+        <p>Yet if we take <a href="http://www.wikidata.org/entity/Q9391">Wittgenstein</a>’s use of communication in this paragraph as a whole, we find rather that it falls under two major themes found in the paragraph: ‘<a property="w:refersTo" href="ethics-lecture.html#AboutThisLecture">difficulties met communicating thoughts generally and philosophical explanations specifically</a>’ and ‘<a property="w:refersTo" href="ethics-lecture.html#TheBoundariesOfLanguage">What are the boundaries of communication/language?</a>’.</p>
+    </div>
+</div>
+
+<div typeof="w:Discussion" resource="#IndexVSSemanticLabelling">
+    <ul class="meta">
+        <li property="w:name">Difference between a good index and semantic labelling</li>
+        <li property="w:keywords">
+        semantic labelling, good index, finding occurrences of words, synonyms, phrases, identify, simile
+        </li>
+        <li property="w:description">A discussion on the difference between a good index and semantic labelling.</li>
+        <li property="w:hasParticipant" href="#DeirdreChristinePageSmith"></li>
+    </ul>
+
+    <div typeof="w:Concept" resource="#Content">
+        <ul class="meta">
+            <li property="w:name">Content</li>
+            <li property="w:description">Textual content.</li>
+            <li property="w:definedBy" href="#DeirdreChristinePageSmith"></li>
+        </ul>
+    </div>
+    <div typeof="w:Concept" resource="#Form">
+        <ul class="meta">
+            <li property="w:name">Form</li>
+            <li property="w:definedBy" href="#DeirdreChristinePageSmith"></li>
+            <li property="w:description">The form is the way something is or happens.</li>
+        </ul>
+    </div>
+    <div typeof="w:Concept" resource="#TextExegesis">
+        <ul class="meta">
+            <li property="w:name">Text Exegesis</li>
+            <li property="w:definedBy" href="#DeirdreChristinePageSmith"></li>
+            <li property="w:description">An exposition or explanation of a text, especially a religious one</li>
+        </ul>
+    </div>
+    <div typeof="w:Concept" resource="#HistoryofPhilosophy">
+        <ul class="meta">
+            <li property="w:name">History of Philosophy</li>
+            <li property="w:definedBy" href="#DeirdreChristinePageSmith"></li>
+            <li property="w:description">The history of philosophy is the study of philosophical ideas and concepts through time</li>
+        </ul>
+    </div>
+    <div typeof="w:Concept" resource="#PhilosophicalSlogans">
+        <ul class="meta">
+            <li property="w:name">Philosophical Slogans</li>
+            <li property="w:definedBy" href="#DeirdreChristinePageSmith"></li>
+            <li property="w:description">Philosophical slogans and profound quotations</li>
+        </ul>
+    </div>
+    <div typeof="w:Concept" resource="#Comments">
+        <ul class="meta">
+            <li property="w:name">Comments</li>
+            <li property="w:definedBy" href="#DeirdreChristinePageSmith"></li>
+            <li property="w:description">A space where further reflections on the contents of a paragraph as well as clarifications regarding the labelling process itself can be placed</li>
+        </ul>
+    </div>
+
+    <div property="w:sourceText">
+
+        <p>And with this we can begin to answer a question readers may already have asked themselves, “What is the difference between semantic labelling and making a good index?” </p>
+
+        <p>A good index might next to the entry ‘communication’ write ‘cf. explanation, language’ and vice versa. </p>
+
+        <p>This practice enables the user to find occurrences of words, their synonyms and phrases containing both, however it does not make sense of the use of words or phrases.</p>
+
+        <p>What semantic labelling does share with making indexes is to identify in advance what will be of interest for a reader and to facilitate its location. </p>
+
+        <p>Semantic labelling does not stop here. </p>
+
+        <p>It goes further to abstract an overall meaning from each paragraph based on these individual words and phrases.</p>
+
+        <p>E.g. ‘difficulties met communicating thoughts generally and philosophical explanations specifically’ is based on more literal examples found in the text: being a non-native language speaker, saying something which comes from the heart, showing the listener both the road of an explanation and the end/goal to which it leads.</p>
+
+        <p>The example I have just described falls under the first, Content, of six categories with which we are currently working. </p>
+
+        <p>The other categories are: <a href="#Form">Form</a>, <a href="#TextExegesis">Text Exegesis</a>, <a href="#HistoryofPhilosophy">History of Philosophy</a>, <a href="#PhilosophicalSlogans">Philosophical Slogans</a> and <a href="#Comments">Comments</a>. </p>
+
+        <p>As with my first example, even though we may find examples of all of these in a good index, they would neither be listed by category nor allow the kind of ‘sense making’ semantic labels do. </p>
+
+        <p>If we look again at paragraph two of <a property="w:refersTo" href="ethics-lecture.html#LectureOnEthics">Ms 139a</a>, we find several metaphors (talking from the heart, a hearer seeing the road a philosophical explanation goes down and the end too which it leads) and two rhetorical questions which all would be difficult to locate in a general index or word search. </p>
+
+        <p>In our current scheme these would fall under the category <a href="#Form">Form</a>. </p>
+
+        <p>Other current candidates falling under <a href="#Form">Form</a> are: definition, example, analogy and simile. </p>
+
+        <p>Regarding our third and fourth categories, Text exegesis and <a href="#HistoryofPhilosophy">History of Philosophy</a> we find that <a href="http://www.wikidata.org/entity/Q9391">Wittgenstein</a>’s use of ‘human being’ (‘a human being who tries to tell other human beings something which some of them might possibly find useful’) can be traced to a discussion with Maurice Drury around 1930 referring to William James as a ‘human person’, and <a href="http://www.wikidata.org/entity/Q9391">Wittgenstein</a> responding, “That is what makes him a good philosopher; he was a real human being.” </p>
+
+        <p>(Goodman, p. 37) Here we have reference to both a conversation contemporary to <a property="w:refersTo" href="ethics-lecture.html#LectureOnEthics">Ms 139a</a> as well as to a figure in the history of philosophy whose work influenced Wittgenstein throughout his life. </p>
+
+        <p>Although there is not much in the way of <a href="#PhilosophicalSlogans">Philosophical Slogans</a> found in this particular <a property="w:refersTo" href="ethics-lecture.html#AboutThisLecture">paragraph</a>, we find many in the next: <a property="w:refersTo" href="ethics-lecture.html#EthicsConcept">Ethics</a>, <a property="w:refersTo" href="ethics-lecture.html#Aesthetics">Aesthetics</a>, <a property="w:refersTo" href="ethics-lecture.html#AbsoluteGood">value and good</a>. </p>
+
+        <p>Perhaps more so than the <a href="#Content">Content</a> category, this one most resembles an index. </p>
+
+        <p>Yet here again we find the possibility of listing a <a href="#PhilosophicalSlogan">slogan</a> which, although not literally used, imbues a whole paragraph. </p>
+
+        <p href="#Comment" property="w:sourceText">The final category with which we are currently working, Comment, is a space where further reflections on the contents of a paragraph as well as clarifications regarding the labelling process itself can be placed. </p>
+    </div>
+</div>
+
+<div typeof="w:Discussion" resource="#RoadMetaphor">
+    <ul class="meta">
+        <li property="w:name">The Road Metaphor</li>
+        <li property="w:hasParticipant" href="#DeirdreChristinePageSmith"></li>
+        <li property="w:description">A space where further reflections on the contents of a paragraph as well as clarifications regarding the labelling process itself can be placed</li>
+        <li property="w:refersTo" href="ethics-lecture.html#TheRightRoad"></li>
+    </ul>
+
+    <div property="w:sourceText">
+        <p>If we return to the second paragraph of <a property="w:refersTo" href="ethics-lecture.html#LectureOnEthics">Ms 139a</a>, this category could be used to go into more explanatory detail regarding <a href="http://www.wikidata.org/entity/Q9391">Wittgenstein</a>’s use of <a property="w:refersTo" href="ethics-lecture.html#TheRightRoad">the road metaphor</a> as something which returns in several guises in his later philosophy: a rule standing as a signpost Philosophical Investigations (PI) §85, perspicuous representation PI §122, method of projection PI §139, 141, 366, as well in PI §426 where he <a property="w:refersTo" href="ethics-lecture.html#ExpressionsAreSimiles">mentions God and uses other religious analogies to capture something to which we do not have access</a>. </p>
+    </div>
+</div>
+
+<div typeof="w:Discussion" resource="#OnGaltonExperiment">
+    <ul class="meta">
+        <li property="w:name">On the Galton experiment</li>
+        <li property="w:hasParticipant" href="#DeirdreChristinePageSmith"></li>
+        <li property="w:description">Page Smith discusses the Galton experiment as used by Wittgenstein in his ethics lecture.</li>
+        <li property="w:refersTo" href="ethics-lecture.html#GaltonExperiment"></li>
+    </ul>
+
+    <div property="w:sourceText">
+
+        <p>In the context of <a property="w:refersTo" href="ethics-lecture.html#LectureOnEthics">Ms 139a</a> it becomes evident early on both how well the actual process of semantic labelling fits with important aspects of <a href="http://www.wikidata.org/entity/Q9391">Wittgenstein</a>’s philosophy, but also some dangers it might pose. </p>
+
+        <p>On p. 4 of <a property="w:refersTo" href="ethics-lecture.html#LectureOnEthics">Ms 139a</a> Wittgenstein uses <a property="w:refersTo" href="ethics-lecture.html#GaltonExperiment">Francis Galton and composite photography as an example of the effect he would like to achieve by using synonyms to help communicate his thoughts</a> on the lecture’s theme, <a property="w:refersTo" href="ethics-lecture.html#EthicsConcept">Ethics</a>. </p>
+
+        <p>There is a tension in both the example of Galton, <a property="w:refersTo" href="ethics-lecture.html#LectureOnEthics">Ms 139a</a> as a whole as well as <a href="http://www.wikidata.org/entity/Q9391">Wittgenstein</a>’s philosophy more generally regarding the use of examples both to point to a common thread as well as to illustrate the difficultly of showing something essential to all. </p>
+
+        <p>(cf. “Ethics, Language and the Development of <a href="http://www.wikidata.org/entity/Q9391">Wittgenstein</a>’s Thought in <a property="w:refersTo" href="ethics-lecture.html#LectureOnEthics">Ms 139a</a>” in this volume) </p>
+
+        <p>Like Galton’s layering of imagines one on top of the other to form a composite, the application of semantic labelling to a work offers different views depending on which layers make up the composite. </p>
+
+        <p>Although this may increase our understanding of a work, we (both encoders and users) must not mistake it for a final statement about a work, see the composite as an image of something real in the sense of a fact of the matter. </p>
+
+        <p>Although Galton failed through composite photography to show common types of human constitutions (illness, criminality) he did succeed in showing that fingerprints are unique.† </p>
+    </div>
+</div>
+
+<h2>Literature</h2>
+
+
+<p>1991 The <a href="http://wab.uib.no/">Wittgenstein Archives</a> at the <a href="http://uib.no">University of Bergen</a>:
+       Background, Project Plan, and Annual Report 1990, Bergen: Working Papers from the
+       <a href="http://wab.uib.no/">Wittgenstein Archives</a> at the <a href="http://uib.no">University of Bergen</a> No. 2.</p>
+
+<p>Goodman, Russell 2004 Wittgenstein and William James, Cambridge: Cambridge University Press.</p>
+
+<p><a href="http://www.wikidata.org/entity/Q15715078">Pichler, A.</a> and O.E. Haugen 2005 ”Fra kombinerte utgaver til dynamisk utgivelse:
+
+       Erfaringer fra edisjonsfilologisk arbeid med Wittgensteins filosofiske skrifter og
+       nordiske middelaldertekster” in Læsemåder: Udgavetyper og målgrupper, Nordisk Netværk for Editionsfilologer,
+       Skrifter 6 P. Dahl, J. Kondrup andK. Kynde (eds.) Copenhagen: C.A. Reitzels Forlag, pp.178-249.</p>
+
+    <p><a href="http://www.wikidata.org/entity/Q15715078">Pichler, Alois</a> 2002 ”Encoding Wittgenstein. Some remarks on Wittgenstein's Nachlass, the <a href="#BEE">Bergen Electronic Edition</a>, and future electronic publishing and networking” In: TRANS.  Internet-Zeitschrift für Kulturwissenschaften 10/2001ff, Wien: Research Institute for Austrian and International Literature and Cultural Studies (INST). (http://www.inst.at/trans/10Nr/pichler10.htm)</p>
+
+    <p><a href="http://www.wikidata.org/entity/Q9391">Wittgenstein, Ludwig</a> 2000 <a property="w:refersTo" href="ethics-lecture.html#LectureOnEthics">Ms 139a</a>: “<a property="w:refersTo" href="ethics-lecture.html#LectureOnEthics">Lecture on Ethics</a>” in <a href="http://www.wikidata.org/entity/Q9391">Wittgenstein</a>’s Nachlass: <a href="#BEE">Bergen Electronic Edition</a>, Oxford: Oxford University Press.</p>
+
+<h2>Notes</h2>
+
+<p>
+   1. For a discussion of difficulties met in its implementation see “[Wittgenstein registrieren]” by Wilhelm Krüger in this volume.
+</p>
+
+<p>† I would like to thank <a href="http://wab.uib.no/">WAB</a> director <a href="http://www.wikidata.org/entity/Q15715078">Alois Pichler</a> and Wilhelm Krüger for discussion and comments on drafts of this paper.</p>
+
+</body>
+</html>

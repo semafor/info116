@@ -1,0 +1,98 @@
+# Using graphs:
+# annotated/re-discovering-wittgenstein.html
+# annotated/ethics-lecture.html
+# annotated/Jayne_Sattler_Moral_Judgments.html
+
+------------------------------------------------------------------------------------------------------------
+QUERY #1
+------------------------------------------------------------------------------------------------------------
+
+PREFIX : <http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology>
+
+PREFIX PageSmith: <annotated/re-discovering-wittgenstein.html#DeirdreChristinePageSmith>
+PREFIX JayneSattler: <annotated/Jayne_Sattler_Moral_Judgments.html#JayneSattler>
+PREFIX Wittgenstein: <http://www.wikidata.org/entity/Q9391#>
+
+SELECT ?DiscussionName ?ReferenceName
+WHERE {
+ {
+  ?thing ?someRelation PageSmith:;
+  :name ?DiscussionName ;
+  :refersTo ?reference .
+  ?reference ?by Wittgenstein: ;
+  :name ?ReferenceName .
+ } UNION {
+  ?thing ?someRelation JayneSattler:;
+  :name ?DiscussionName ;
+  :refersTo ?reference .
+  ?reference ?by Wittgenstein: ;
+  :name ?ReferenceName .
+ }
+}
+
+------------------------------------------------------------------------------------------------------------
+QUERY #2
+------------------------------------------------------------------------------------------------------------
+
+PREFIX : <http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology>
+PREFIX PageSmith: <annotated/re-discovering-wittgenstein.html#DeirdreChristinePageSmith>
+PREFIX JayneSattler: <annotated/Jayne_Sattler_Moral_Judgments.html#JayneSattler>
+PREFIX Wittgenstein: <http://www.wikidata.org/entity/Q9391>
+
+
+SELECT ?ConceptName ?Author ?source
+WHERE {
+ ?concept a :Concept ;
+ :name ?ConceptName .
+ OPTIONAL{
+  ?concept :sourceText ?source .
+ }
+ OPTIONAL{
+  ?concept :definedBy ?Author .
+ }
+}
+
+------------------------------------------------------------------------------------------------------------
+QUERY #3
+------------------------------------------------------------------------------------------------------------
+PREFIX : <http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology>
+PREFIX Wittgenstein: <http://www.wikidata.org/entity/Q9391>
+
+
+SELECT DISTINCT ?name ?source
+WHERE {
+ ?a :refersTo ?b;
+ :sourceText ?source;
+ :name ?name .
+ ?b ?by ?someone .
+ FILTER(?someone = Wittgenstein:)
+}
+
+------------------------------------------------------------------------------------------------------------
+QUERY #4
+------------------------------------------------------------------------------------------------------------
+PREFIX : <http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology>
+PREFIX Wittgenstein: <http://www.wikidata.org/entity/Q9391>
+
+SELECT ?name ?source
+WHERE {
+ ?thing ?by Wittgenstein: ;
+ :name ?name ;
+ :sourceText ?source .
+}
+
+------------------------------------------------------------------------------------------------------------
+QUERY #5
+------------------------------------------------------------------------------------------------------------
+PREFIX : <http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology>
+PREFIX PageSmith: <annotated/re-discovering-wittgenstein.html#DeirdreChristinePageSmith>
+PREFIX Wittgenstein: <http://www.wikidata.org/entity/Q9391>
+
+SELECT ?TopicName ?Reference
+WHERE {
+ ?s a :Topic;
+ :definedBy PageSmith:;
+ :name ?TopicName;
+ :refersTo ?Reference .
+ ?Reference ?by Wittgenstein: .
+}

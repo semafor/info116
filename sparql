@@ -11,23 +11,25 @@ PREFIX PageSmith: <annotated/re-discovering-wittgenstein.html#DeirdreChristinePa
 PREFIX JayneSattler: <annotated/Jayne_Sattler_Moral_Judgments.html#JayneSattler>
 PREFIX Wittgenstein: <http://www.wikidata.org/entity/Q9391>
 
-SELECT ?DiscussionName ?by ?reference
+SELECT ?DiscussionName ?ReferenceName
 WHERE {
  {
   ?thing ?someRelation PageSmith:;
   :name ?DiscussionName ;
   :refersTo ?reference .
-  ?reference ?by Wittgenstein: .
+  ?reference ?by Wittgenstein: ;
+  :name ?ReferenceName .
  } UNION {
   ?thing ?someRelation JayneSattler:;
   :name ?DiscussionName ;
   :refersTo ?reference .
-  ?reference ?by  Wittgenstein: .
+  ?reference ?by Wittgenstein: ;
+  :name ?ReferenceName .
  }
 }
 
 
-Results (link not anonymous): http://librdf.org/query?uri=http%3A%2F%2Fhal.jgdx.no%2Fethics%2Finfo116%2Fannotated%2Fre-discovering-wittgenstein.html+http%3A%2F%2Fhal.jgdx.no%2Fethics%2Finfo116%2Fannotated%2FJayne_Sattler_Moral_Judgments.html+http%3A%2F%2Fhal.jgdx.no%2Fethics%2Finfo116%2Fannotated%2Fethics-lecture.html&query=PREFIX+%3A+%3Chttp%3A%2F%2Fwww.semanticweb.org%2FINFO116%2Fontologies%2F2015%2F10%2Fwittgenstein-ontology%3E%0D%0APREFIX+PageSmith%3A+%3Chttp%3A%2F%2Fhal.jgdx.no%2Fethics%2Finfo116%2Fannotated%2Fre-discovering-wittgenstein.html%23DeirdreChristinePageSmith%3E%0D%0APREFIX+JayneSattler%3A+%3Chttp%3A%2F%2Fhal.jgdx.no%2Fethics%2Finfo116%2Fannotated%2FJayne_Sattler_Moral_Judgments.html%23JayneSattler%3E%0D%0APREFIX+Wittgenstein%3A+%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2FQ9391%3E%0D%0A%0D%0A%23+What+do+Page+Smith+et.+al.+discuss+in+Wittgenstein%E2%80%99s+Lecture+on+Ethics%3F%0D%0ASELECT+%3FDiscussionName+%3Freference%0D%0AWHERE+{%0D%0A++++{%0D%0A++++++++%3Fthing+%3FsomeRelation+PageSmith%3A%3B%0D%0A++++++++%3Aname+%3FDiscussionName+%3B%0D%0A++++++++%3ArefersTo+%3Freference+.%0D%0A++++++++%3Freference+%3Fby+Wittgenstein%3A+.%0D%0A++++}+UNION+{%0D%0A++++++++%3Fthing+%3FsomeRelation+JayneSattler%3A%3B%0D%0A++++++++%3Aname+%3FDiscussionName+%3B%0D%0A++++++++%3ArefersTo+%3Freference+.%0D%0A++++++++%3Freference+%3Fby++Wittgenstein%3A+.%0D%0A++++}%0D%0A}+%0D%0A&language=sparql&Run+Query=Run+Query&.cgifields=json&.cgifields=raw
+Results (link not anonymous): http://librdf.org/query?uri=http%3A%2F%2Fhal.jgdx.no%2Fethics%2Finfo116%2Fannotated%2Fre-discovering-wittgenstein.html+http%3A%2F%2Fhal.jgdx.no%2Fethics%2Finfo116%2Fannotated%2FJayne_Sattler_Moral_Judgments.html+http%3A%2F%2Fhal.jgdx.no%2Fethics%2Finfo116%2Fannotated%2Fethics-lecture.html&query=PREFIX+%3A+%3Chttp%3A%2F%2Fwww.semanticweb.org%2FINFO116%2Fontologies%2F2015%2F10%2Fwittgenstein-ontology%3E%0D%0APREFIX+PageSmith%3A+%3Chttp%3A%2F%2Fhal.jgdx.no%2Fethics%2Finfo116%2Fannotated%2Fre-discovering-wittgenstein.html%23DeirdreChristinePageSmith%3E%0D%0APREFIX+JayneSattler%3A+%3Chttp%3A%2F%2Fhal.jgdx.no%2Fethics%2Finfo116%2Fannotated%2FJayne_Sattler_Moral_Judgments.html%23JayneSattler%3E%0D%0APREFIX+Wittgenstein%3A+%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2FQ9391%23%3E%0D%0A%0D%0A%23+What+do+Page+Smith+et.+al.+discuss+in+Wittgenstein%E2%80%99s+Lecture+on+Ethics%3F%0D%0ASELECT+%3FDiscussionName+%3FReferenceName%0D%0AWHERE+{%0D%0A++++{%0D%0A++++++++%3Fthing+%3FsomeRelation+PageSmith%3A%3B%0D%0A++++++++%3Aname+%3FDiscussionName+%3B%0D%0A++++++++%3ArefersTo+%3Freference+.%0D%0A++++++++%3Freference+%3Fby+Wittgenstein%3A+%3B%0D%0A++++++++%3Aname+%3FReferenceName+.%0D%0A++++}+UNION+{%0D%0A++++++++%3Fthing+%3FsomeRelation+JayneSattler%3A%3B%0D%0A++++++++%3Aname+%3FDiscussionName+%3B%0D%0A++++++++%3ArefersTo+%3Freference+.%0D%0A++++++++%3Freference+%3Fby+Wittgenstein%3A+%3B%0D%0A++++++++%3Aname+%3FReferenceName+.%0D%0A++++}%0D%0A}+%0D%0A&language=sparql&Run+Query=Run+Query&.cgifields=json&.cgifields=raw
 
 
 ------------------------------------------------------------------------------------------------------------
