@@ -32,6 +32,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#asserts -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#asserts">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#Statement"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#definedBy -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#definedBy">
@@ -39,6 +47,12 @@
         <rdfs:range rdf:resource="http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#Person"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#Topic"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#defines -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#defines"/>
     
 
 
@@ -51,11 +65,28 @@
     
 
 
+    <!-- http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#madeBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#madeBy">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#Person"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#Statement"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#raisedBy -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#raisedBy">
         <rdfs:range rdf:resource="http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#Person"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#Question"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#raises -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#raises">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#Question"/>
     </owl:ObjectProperty>
     
 
@@ -159,6 +190,7 @@
     <!-- http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#Discussion -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#Discussion">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#Statement"/>
         <rdfs:comment xml:lang="en">A discussion in Wittgenstein&apos;s universe.</rdfs:comment>
     </owl:Class>
     
@@ -191,6 +223,8 @@
     <!-- http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#Question -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#Question">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#Statement"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#Topic"/>
         <rdfs:comment xml:lang="en">A question raised by someone in Wittgenstein&apos;s universe.</rdfs:comment>
     </owl:Class>
     
@@ -202,6 +236,12 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#Hypothetical"/>
         <rdfs:comment xml:lang="en">Figure of speech that directly compares two things through the explicit use of connecting words (such as like, as, so, than, or various verbs such as resemble)</rdfs:comment>
     </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#Statement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#Statement"/>
     
 
 
@@ -221,6 +261,19 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#Concept"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#Conclusion"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#Discussion"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#Hypothetical"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#Person"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#Question"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#Statement"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/INFO116/ontologies/2015/10/wittgenstein-ontology#Topic"/>
+        </owl:members>
+    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointProperties"/>
         <owl:members rdf:parseType="Collection">
