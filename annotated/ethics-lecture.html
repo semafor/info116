@@ -32,12 +32,26 @@
             <li property="w:hasParticipant" href="http://www.wikidata.org/entity/Q9391"></li>
         </ul>
 
+        <div property="w:asserts" typeof="w:Statement" resource="#OnWittgensteinsLanguage">
+            <ul class="meta">
+                <li property="w:name">English, not the native tounge</li>
+                <li property="w:madeBy" href="http://www.wikidata.org/entity/Q295386"></li>
+            </ul>
+        </div>
+
+        <div property="w:asserts" typeof="w:Statement" resource="#LowestDesires">
+            <ul class="meta">
+                <li property="w:name">One of the lowest of desires</li>
+                <li property="w:madeBy" href="http://www.wikidata.org/entity/Q295386"></li>
+            </ul>
+        </div>
+
         <div property="w:sourceText">
             <p>Ladies and Gentlemen, Before I begin to speak about my subject proper let me make a few introductory remarks.</p>
 
             <p>I feel I shall have great difficulties in communicating my thoughts to you and I think some of them may be diminished by mentioning them to you beforehand.</p>
 
-            <p>The first one, which almost I need not mention, is, that English is not my native tongue and my expression therefore often lacks that precision and subtlety which would be desirable if one talks about a difficult subject.</p>
+            <p>The first one, which almost I need not mention, is, <span href="#OnWittgensteinsLanguage" property="w:sourceText">that English is not my native tongue and my expression therefore often lacks that precision and subtlety which would be desirable if one talks about a difficult subject</span>.</p>
 
             <p>All I can do is to ask you to make my task easier by trying to get at my meaning in spite of the faults which I will constantly be committing against the English grammar.</p>
 
@@ -47,7 +61,7 @@
 
             <p>I call this a misuse for to explain a scientific matter to you it would need a course of lectures and not an hour's paper.</p>
 
-            <p>An other alternative would have been to give you what's called a popular-scientific lecture, that is a lecture intended to make you believe that you understand a thing which actually you don't understand, and to gratify what I believe to be one of the lowest desires of modern people, namely the superficial curiosity about the latest discoveries of science.</p>
+            <p href="#LowestDesires" property="w:sourceText">An other alternative would have been to give you what's called a popular-scientific lecture, that is a lecture intended to make you believe that you understand a thing which actually you don't understand, and to gratify what I believe to be one of the lowest desires of modern people, namely the superficial curiosity about the latest discoveries of science.</p>
 
             <p>I rejected these alternatives and decided to talk to you about a subject which seems to me to be of general importance, hoping that it may help to clear up your thoughts about this subject (even if you should entirely disagree with what I will say about it).</p>
 
@@ -98,10 +112,10 @@
             <li property="w:hasParticipant" href="http://www.wikidata.org/entity/Q191026"></li>
         </ul>
 
-    <div property="w:sourceText">
-        <p>And to make you see as clearly as possible what I take to be the subject matter of Ethics I will put before you a number of more or less synonymous expressions each of which could be substituted for the above definition, and by enumerating them I want to produce the same sort of effect which Galton produced when he took a number of photos of different faces on the same photographic plate in order to get the picture of the typical features they all had in common.</p>
+        <div property="w:sourceText">
+            <p>And to make you see as clearly as possible what I take to be the subject matter of Ethics I will put before you a number of more or less synonymous expressions each of which could be substituted for the above definition, and by enumerating them I want to produce the same sort of effect which Galton produced when he took a number of photos of different faces on the same photographic plate in order to get the picture of the typical features they all had in common.</p>
 
-        <p>And as by showing to you such a collective photo I could make you see what is the typical — say — Chinese face; so if you look through the row of synonyms which I will put before you, you will, I hope, be able to see the characteristic features they all have in common and these are the characteristic features of Ethics.</p>
+            <p>And as by showing to you such a collective photo I could make you see what is the typical — say — Chinese face; so if you look through the row of synonyms which I will put before you, you will, I hope, be able to see the characteristic features they all have in common and these are the characteristic features of Ethics.</p>
         </div>
     </div>
 
@@ -141,19 +155,26 @@
             </ul>
         </div>
 
-        <div property="w:defines" typeof="w:Fact" resource="#AllFactsAreEqual">
+        <div property="w:asserts" typeof="w:Statement" resource="#AllFactsAreEqual">
             <ul class="meta">
                 <li property="w:name">Propositions on the same level</li>
-                <li property="w:definedBy" href="http://www.wikidata.org/entity/Q9391"></li>
+                <li property="w:madeBy" href="http://www.wikidata.org/entity/Q9391"></li>
                 <li property="w:keywords">trivial, important, sublime, absolute sense, propositions</li>
                 <li property="w:description">Ludwig Wittgenstein asserts that no propositions can have relative value.</li>
+            </ul>
+        </div>
+
+        <div property="w:defines" typeof="w:Concept" resource="#TrivialAndAbsoluteSense">
+            <ul class="meta">
+                <li property="w:name">Two different types of expressions</li>
+                <li property="w:definedBy" href="http://www.wikidata.org/entity/Q9391"></li>
             </ul>
         </div>
 
         <div property="w:sourceText">
             <p>Now the first thing that strikes one about all these expressions is that each of them is actually used in two very different senses.</p>
 
-            <p>I will call them the trivial or relative sense on the one hand and the ethical or absolute sense on the other.</p>
+            <p href="#TrivialAndAbsoluteSense" property="w:sourceText">I will call them the trivial or relative sense on the one hand and the ethical or absolute sense on the other.</p>
 
             <p>If for instance I say that this is a good chair this means that the chair serves a certain predetermined purpose and the word “good” here has only meaning so far as this purpose has been previously fixed upon.</p>
 
@@ -178,12 +199,10 @@
 
             <p>Now what I wish to contend is, that although all judgments of relative value can be shown to be mere statements of facts, no statement of fact can ever be, or imply, a judgment of absolute value.</p>
 
-            <div href="#WorldBook">
-                <div property="w:sourceText">
-                    <p>Let me explain this: Suppose one of you were an omniscient person and therefore knew all the movements of all the bodies in the world dead or alive and that he also knew all the states of mind of all human beings that ever lived, and suppose this man wrote all he knew in a big book, then this book would contain the whole description of the world; and what I want to say is, that this book would contain nothing that we would call an ethical judgment or anything that would logically imply such a judgment.</p>
+            <div href="#WorldBook" property="w:sourceText">
+                <p>Let me explain this: Suppose one of you were an omniscient person and therefore knew all the movements of all the bodies in the world dead or alive and that he also knew all the states of mind of all human beings that ever lived, and suppose this man wrote all he knew in a big book, then this book would contain the whole description of the world; and what I want to say is, that this book would contain nothing that we would call an ethical judgment or anything that would logically imply such a judgment.</p>
 
-                    <p>It would of course contain all relative judgments of value and all true scientific propositions and in fact all true propositions that can be made.</p>
-                </div>
+                <p>It would of course contain all relative judgments of value and all true scientific propositions and in fact all true propositions that can be made.</p>
             </div>
 
             <p>But all the facts described would, as it were, stand on the same level and in the same way all propositions stand on the same level.</p>
@@ -272,6 +291,18 @@
                 <li property="w:description">Ludwig Wittgenstein describes the metaphor of the right road.</li>
             </ul>
         </div>
+
+        <div property="w:raises" typeof="w:Question" resource="#TryingToExpress">
+            <ul class="meta">
+                <li property="w:name">Motivation for certain ethical questions</li>
+                <li property="w:raisedBy" href="http://www.wikidata.org/entity/Q9391"></li>
+                <li property="w:keywords">
+                expressions, absolute good, absolute value, mind, tempted
+                </li>
+                <li property="w:description">Ludwig Wittgenstein raises a question on why we use terms like “absolute value” and “absolute good”.</li>
+            </ul>
+        </div>
+
         <div property="w:sourceText">
             <p>--- I said that so far as facts and propositions are concerned there is only relative value and relative good, right etc.</p>
 
@@ -291,7 +322,7 @@
 
         <p>No state of affairs has in itself, what I would like to call, the coercive power of an absolute judge.</p>
 
-        <p>— Then what have all of us who, like myself, are still tempted to use such expressions as “absolute good”, “absolute value” etc., what have we in mind and what do we try to express? Now whenever I try to make this clear to myself it is natural that I should recall cases in which I would certainly use these expressions and I am then in the situation and in which you would be if, for instance, I were to give you a lecture on the psychology of pleasure.</p>
+        <p><span href="#TryingToExpress" property="w:sourceText">— Then what have all of us who, like myself, are still tempted to use such expressions as “absolute good”, “absolute value” etc., what have we in mind and what do we try to express?</span> Now whenever I try to make this clear to myself it is natural that I should recall cases in which I would certainly use these expressions and I am then in the situation and in which you would be if, for instance, I were to give you a lecture on the psychology of pleasure.</p>
         </div>
     </div>
 
@@ -306,6 +337,17 @@
         </ul>
 
         <div property="w:defines" typeof="w:Concept" resource="#ExpressionsAreSimiles">
+            <ul class="meta">
+                <li property="w:name">Some ethical and religous expression are similes</li>
+                <li property="w:definedBy" href="http://www.wikidata.org/entity/Q9391"></li>
+                <li property="w:keywords">
+                    simile, safe, existence, wondering, ethical, religious, expression
+                </li>
+                <li property="w:description">Ludwig Wittgenstein defines the concept of religious and ethical similes.</li>
+            </ul>
+        </div>
+
+        <div property="w:raises" typeof="w:Question" resource="#ExpressionsAreSimiles">
             <ul class="meta">
                 <li property="w:name">Some ethical and religous expression are similes</li>
                 <li property="w:definedBy" href="http://www.wikidata.org/entity/Q9391"></li>
